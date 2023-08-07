@@ -65,7 +65,6 @@ export const ContactForm = ({ onFormSubmit }) => {
             type="text"
             id={nameInputId}
             name="name"
-            title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             required
           />
           <FormError name="name" />
@@ -76,7 +75,6 @@ export const ContactForm = ({ onFormSubmit }) => {
             type="tel"
             id={telInputId}
             name="number"
-            title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
           />
           <FormError name="number" />
