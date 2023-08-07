@@ -6,11 +6,11 @@ export const ContactsList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 5px;
-
-  list-style-type: disc;
 `;
 
-export const ContactsListItem = styled.li`
+export const ContactsListItem = styled.li``;
+
+export const ListItemWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;

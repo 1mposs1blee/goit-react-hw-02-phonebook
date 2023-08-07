@@ -3,6 +3,7 @@ import {
   ContactsList,
   ContactsListItem,
   ButtonDeleteContact,
+  ListItemWrapper,
 } from './ContactList.styled';
 
 export const ContactList = ({ contacts, onClickButtonDelete }) => {
@@ -10,15 +11,17 @@ export const ContactList = ({ contacts, onClickButtonDelete }) => {
     <ContactsList>
       {contacts.map(({ name, number, id }) => (
         <ContactsListItem key={id}>
-          {name}: {number}
-          <ButtonDeleteContact
-            onClick={() => {
-              onClickButtonDelete(id);
-            }}
-            type="button"
-          >
-            Delete
-          </ButtonDeleteContact>
+          <ListItemWrapper>
+            {name}: {number}
+            <ButtonDeleteContact
+              onClick={() => {
+                onClickButtonDelete(id);
+              }}
+              type="button"
+            >
+              Delete
+            </ButtonDeleteContact>
+          </ListItemWrapper>
         </ContactsListItem>
       ))}
     </ContactsList>
