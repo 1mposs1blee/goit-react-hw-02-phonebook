@@ -37,12 +37,13 @@ export class App extends Component {
   };
 
   onClickButtonDelete = id => {
-    const { contacts } = this.state;
-    const contactsWithoutDeleted = contacts.filter(
-      ({ id: contactId }) => contactId !== id
-    );
+    this.setState(({ contacts }) => {
+      const contactsWithoutDeleted = contacts.filter(
+        ({ id: contactId }) => contactId !== id
+      );
 
-    this.setState({ contacts: [...contactsWithoutDeleted] });
+      return { contacts: [...contactsWithoutDeleted] };
+    });
   };
 
   render() {
